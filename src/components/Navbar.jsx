@@ -18,7 +18,7 @@ const NavBar = () => {
     },[]);
 
     function logout(){
-        fetch("http://localhost:4000/api/logout",{
+        fetch("https://note-10ek.onrender.com/api/logout",{
             credentials:"include",
             method:"POST",
         });

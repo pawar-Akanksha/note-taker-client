@@ -7,7 +7,7 @@ import { useContext } from "react";
 const Home = () => {
   const { userInfo, setUserInfo } = useContext(UserContext);
   useEffect(() => {
-    fetch("http://localhost:4000/api/profile", {
+    fetch("https://note-10ek.onrender.com/api/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
