@@ -16,33 +16,32 @@ const Home = () => {
     });
   }, []);
 
-  function logout() {
-    fetch("http://localhost:4000/api/logout", {
-      credentials: "include",
-      method: "POST",
-    });
-    setUserInfo(null);
-    console.log("User Logout");
-  }
+  // function logout() {
+  //   fetch("http://localhost:4000/api/logout", {
+  //     credentials: "include",
+  //     method: "POST",
+  //   });
+  //   setUserInfo(null);
+  //   console.log("User Logout");
+  // }
 
-  const username = userInfo?.username;
+  const email = userInfo?.email;
 
   return (
-    <div>
-      {username && (
-        <>
-          <div className="homecont">
-            <Navbar />
-          </div>
-        </>
-      )}
-      {!username && (
-        <>
-            <p>You need to login..Session expired</p>
-        </>
-      )
-      }
-    </div>
+   <div>
+    {email && (
+      <>
+      <div className="homecont">
+<Navbar/>
+      </div>
+      </>
+    )}
+    {!email && (
+      <>
+     <p>You need to login ....Session expired</p>
+      </>
+    )}
+   </div>
   );
 };
 
